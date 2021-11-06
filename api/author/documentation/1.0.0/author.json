@@ -609,10 +609,7 @@
                   "type": "string"
                 },
                 "cover": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "type": "string"
                 },
                 "slug": {
                   "type": "uid"
