@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "authors",
   "info": {
-    "name": "post"
+    "name": "author",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,14 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
-    },
-    "cover": {
-      "collection": "file",
+    "avatar": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -29,13 +27,9 @@
       "required": false,
       "pluginOptions": {}
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
-    "author": {
-      "via": "posts",
-      "model": "author"
+    "posts": {
+      "collection": "post",
+      "via": "author"
     }
   }
 }
