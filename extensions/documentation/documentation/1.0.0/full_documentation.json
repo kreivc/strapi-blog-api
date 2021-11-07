@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/06/2021 10:33:13 PM"
+    "x-generation-date": "11/07/2021 9:53:04 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -849,7 +849,7 @@
         "parameters": []
       }
     },
-    "/posts/{id}": {
+    "/posts/{slug}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -899,7 +899,7 @@
         "tags": ["Post"],
         "parameters": [
           {
-            "name": "id",
+            "name": "slug",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -909,7 +909,9 @@
             }
           }
         ]
-      },
+      }
+    },
+    "/posts/{id}": {
       "put": {
         "deprecated": false,
         "description": "Update a record",
